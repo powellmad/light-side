@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import LightSide from './LightSide.js';
+import LightSide from './components/LightSide.js';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
