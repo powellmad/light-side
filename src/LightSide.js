@@ -8,14 +8,13 @@ import { userStorageKey } from "./auth/authSettings"
 
 export const LightSide = () => (
     <>
-        <Route path="/">
-            <ApplicationViews />
-        </Route>
         <Route render={() => {
         if (sessionStorage.getItem(userStorageKey)) {
           return (
             <>
-              <Home />
+              <Route exact path="/">
+                  <ApplicationViews />
+              </Route>
             </>
           )
         } else {
