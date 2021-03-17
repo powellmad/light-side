@@ -5,7 +5,7 @@ import { Home } from "./Home"
 export const ApplicationViews = () => {
     return (
         <>
-            <Route>
+            <Route exact path="/">
                 <Home />
             </Route>
         </>
