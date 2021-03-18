@@ -1,0 +1,13 @@
+.quoteComponent {
+    padding: 20px;
+    background-color: lavender;
+    width: 40%;
+    margin: 40px;
+}
+
+.quote_text {
+    font-size: 36pt;
+    padding: 15px;
+    margin: 20px;
+}
+

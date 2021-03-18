@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react"
 import { QuoteContext } from "./QuoteProvider"
 import { useHistory } from "react-router-dom"
 import { QuoteCard } from "./QuoteCard"
+import "./Quote.css"
 
 
 export const QuoteSelection = () => {
@@ -21,14 +22,14 @@ export const QuoteSelection = () => {
     return (
     <div className="quoteComponent">
         {console.log("QuoteList: Render", quotes)}
-        <h2>Quotes</h2>
         <div className="quote-selection">
-        </div>    
-
         <QuoteCard quote={randomQuoteId}/>
-        
+        </div>    
         <button onClick={() => {history.push("/")}}>
-        Next Quote
+          Next Quote
+        </button>
+        <button onClick={() => {history.push("/notes/create")}}>
+          Add Note
         </button>
     </div>
   )
