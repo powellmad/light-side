@@ -1,7 +1,8 @@
 import React from "react"
 
-export const QuoteCard = ({ quote }) => (
+export const QuoteCard = ({ quote }) => {
+    return (
     <section className="quote">
-        <div className="quote_text">{quote.mastertext}</div>
-    </section>
-)
+        <div className="quote_text">{quote?.mastertext}</div>
+    </section>)
+}

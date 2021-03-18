@@ -11,9 +11,18 @@ export const QuoteProvider = (props) => {
         .then(setQuotes)
     }
 
+    const getRandomQuote = () => {
+        return fetch(`http://localhost:8088/quotes`)
+        .then(res => res.json())
+        .then((quotes) => {
+        const randomQuoteId = Math.floor(Math.random() * quotes.length)
+        return randomQuoteId
+        })
+    }
+    
     return (
         <QuoteContext.Provider value={{
-            quotes, getQuotes
+            quotes, getQuotes, getRandomQuote
             }}>
                 {props.children}
         </QuoteContext.Provider>

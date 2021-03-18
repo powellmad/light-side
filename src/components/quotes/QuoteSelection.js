@@ -1,19 +1,24 @@
 import React, { useContext, useEffect, useState } from "react"
 import { QuoteContext } from "./QuoteProvider"
-import { useHistory } from "react-router-dom"
 import { QuoteCard } from "./QuoteCard"
 
 export const QuoteSelection = () => {
-    const {quotes, getQuotes} = useContext(QuoteContext)
-    
-    const history = useHistory()
-    
+    const { quotes, getQuotes, getRandomQuote } = useContext(QuoteContext)
+    const [randomQuote, setRandomQuote] = useState(0)
+
     useEffect(() => {
         getQuotes()
     }, [])
-
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
-    console.log(randomQuote)
+    
+    useEffect(() => {
+        randomQuoteId()
+    }, [])
+    
+    // const randomQuoteId = quotes[Math.floor(Math.random() * quotes.length)]
+    const randomQuoteId = () => {
+        getRandomQuote()
+        .then(setRandomQuote)
+    }    
 
     // console.log("show quote")
     return (
@@ -21,10 +26,10 @@ export const QuoteSelection = () => {
         <h2>Quotes</h2>
 
         <div className="quote-selection">
-        {<QuoteCard quote={randomQuote}/>}
+        {<QuoteCard quote={}/>}
         </div>
         
-        <button onClick={() => {history.push("/")}}>
+        <button onClick={randomQuoteId}>
         Next Quote
         </button>
     </div>
