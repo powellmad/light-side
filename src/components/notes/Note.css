@@ -1,0 +1,14 @@
+.noteComponent {
+    padding: 30px;
+}
+
+.noteCard {
+    border: lavender 40px solid;
+    padding: 30px;
+    font-size: 16px;
+    margin: 20px 50px;
+}
+
+.noteCard div {
+    margin: 2px;
+}

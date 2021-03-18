@@ -6,7 +6,7 @@ import "./Home.css"
 export const Header = () => (
     <header className="header">
         <div className="header__logo">
-            <h2>The Light Side of the Force</h2>
+        <Link to="/"><h2>The Light Side of the Force</h2></Link>
         </div>
         <div className="header__user">
             <h3>Welcome, Padawan</h3>

@@ -12,10 +12,8 @@ export const LightSide = () => (
         if (sessionStorage.getItem(userStorageKey)) {
           return (
             <>
-              <Route exact path="/">
-                  <Header />
-                  <ApplicationViews />
-              </Route>
+              <Header />
+              <ApplicationViews />
             </>
           )
         } else {
