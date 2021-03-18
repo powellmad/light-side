@@ -7,13 +7,13 @@ export const NoteForm = () => {
     const { addNote, getNotes } = useContext(NoteContext)
 
     const timestamp = new Date().toLocaleString()
-    const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+    const currentUser = parseInt(sessionStorage.getItem("app_user_id "))
 
     const [note, setNote] = useState({
         "id": "",
         "text": "",
-        "time": timestamp,
-        "quoteId": 0,
+        "timestamp": timestamp,
+        // "quoteId": selectedQuote,
         "userId": currentUser
     })
 
@@ -38,15 +38,16 @@ export const NoteForm = () => {
             window.alert("Please create a note")
         } else {
             addNote({
-                userId: note.userId,
-                quoteId: note.quoteId,
+                id: note.id,
                 text: note.text,
-                time: note.time
+                timestamp: note.timestamp,
+                // quoteId: note.quoteId,
+                userId: note.userId
             })
-
                 .then(() => history.push("/notes"))
         }
     }
+
 
     return (
         <form className="noteForm">

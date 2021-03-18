@@ -13,6 +13,8 @@ body {
 .header__logo {
     font-size: 24px;
     align-self: flex-start;
+    color: white;
+    text-decoration: none;
 }
 
 h1 {

@@ -5,7 +5,7 @@ import "./Home.css"
 
 export const Home = () => (
     <div className="home">
-        {/* <h1>Welcome, Padawan!</h1> */}
+        <h1>Welcome, Padawan!</h1>
         {/* MasterSelection */}
         <QuoteSelection />
     </div>

@@ -9,7 +9,7 @@ export const Header = () => (
         <Link to="/"><h2>The Light Side of the Force</h2></Link>
         </div>
         <div className="header__user">
-            <h3>Welcome, Padawan</h3>
+            <h3>Padawan</h3>
             <image src="#" alt="user's avatar"></image>
             <Link className="header__journal" to="/notes">Padawan Journal</Link>
             {/* light saber icon from database */}
