@@ -15,17 +15,19 @@ export const ApplicationViews = () => {
                     <Home />
                 </Route>
             </QuoteProvider>
+
             <QuoteProvider>
                 <NoteProvider>
-                    <Route exact path="/notes/create">
+                    <Route path="/notes/create">
                         <NoteForm />
                         <NoteList />
                     </Route>
                 </NoteProvider>
             </QuoteProvider>
+
             <QuoteProvider>
                 <NoteProvider>
-                    <Route exact path="/notes">
+                    <Route path="/notes">
                         <NoteList />
                     </Route>
                 </NoteProvider>
