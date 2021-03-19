@@ -20,3 +20,8 @@ body {
 h1 {
     text-align: center;
 }
+
+.mastersQuotes {
+    display: flex;
+    justify-content: space-evenly;
+}

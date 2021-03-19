@@ -1,0 +1,27 @@
+.master-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-end;
+}
+
+.master {
+    margin: 10px;
+    text-align: center;
+    width: 20%;
+}
+
+.master div {
+    margin: 5px;
+}
+
+.masterComponent {
+    width: 50%;
+    background-color: lavender;
+    margin: 40px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

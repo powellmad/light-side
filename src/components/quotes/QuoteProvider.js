@@ -11,9 +11,20 @@ export const QuoteProvider = (props) => {
         .then(setQuotes)
     }
 
+    const useQuote = quote => {
+        return fetch(`http://localhost:8088/quotes/${quote.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(quote)
+        })
+          .then(getQuotes)
+      }
+
     return (
         <QuoteContext.Provider value={{
-            quotes, getQuotes
+            quotes, getQuotes, useQuote
             }}>
                 {props.children}
         </QuoteContext.Provider>
