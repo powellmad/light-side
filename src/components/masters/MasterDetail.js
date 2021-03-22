@@ -8,7 +8,7 @@ export const MasterDetail = (master) => (
             <div className="master__image">
                 <img className="master__avatar" src={`./jedi/${master.image}.png`} alt={`${master?.image}`}/>
             </div>
-            <button className="master__about">About</button>
+            <button className="master__about">About {master?.name}</button>
             <Link to="/masters" className="master__selection">Choose Your Master Jedi</Link>
     </div>
 )

@@ -4,18 +4,15 @@ import { useHistory } from "react-router-dom"
 import { QuoteCard } from "./QuoteCard"
 import "./Quote.css"
 
-
 export const QuoteSelection = () => {
     const { quotes, getQuotes } = useContext(QuoteContext)
     const history = useHistory()
     
-
   useEffect(() => {
     getQuotes()
     }, [])
 
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
-    
 
     // console.log("show quote")
     return (

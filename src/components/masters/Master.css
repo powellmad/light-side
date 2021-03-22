@@ -18,7 +18,11 @@
 .masterComponent {
     width: 50%;
     background-color: lavender;
-    margin: 40px;
+    margin: auto;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
 }
 
 img {
