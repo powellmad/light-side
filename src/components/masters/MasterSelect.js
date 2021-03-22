@@ -21,3 +21,22 @@ export const MasterSelect = () => {
         </div>
     )
 }
+
+export const MasterDetails = () => {
+    const { masters, getMasters } = useContext(MasterContext)
+
+    useEffect(() => {
+        getMasters()
+    }, [])
+
+    return (
+        <div className="masterComponent">
+            <h1>Choose Your Jedi Master:</h1>
+            <div className="master-list">
+                {masters.map(master => {
+                    return <Master key={master.id} master={master} />
+                })}
+            </div>
+        </div>
+    )
+}

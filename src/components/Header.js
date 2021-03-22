@@ -16,3 +16,5 @@ export const Header = () => (
         </div>
     </header>
 )
+
+//Footer: https://starwarsavatar.com/

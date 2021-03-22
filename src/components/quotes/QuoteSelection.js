@@ -14,21 +14,20 @@ export const QuoteSelection = () => {
     getQuotes()
     }, [])
 
-    const randomQuoteId = quotes[Math.floor(Math.random() * quotes.length)]
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
     
-    console.log(randomQuoteId)
 
     // console.log("show quote")
     return (
     <div className="quoteComponent">
         {console.log("QuoteList: Render", quotes)}
         <div className="quote-selection">
-        <QuoteCard quote={randomQuoteId}/>
+        <QuoteCard quote={randomQuote}/>
         </div>    
         <button onClick={() => {history.push("/")}}>
           Next Quote
         </button>
-        <button onClick={() => {history.push("/notes/create")}}>
+        <button onClick={() => {history.push(`/quotes/${randomQuote.id}/notes/create`)}}>
           Add Note
         </button>
     </div>
