@@ -6,7 +6,7 @@ import { NoteProvider } from "./notes/NoteProvider"
 import { NoteList } from "./notes/NoteList"
 import { NoteForm } from "./notes/NoteForm"
 import { MasterProvider } from "./masters/MasterProvider"
-
+import { MasterSelect } from "./masters/MasterSelect"
 
 export const ApplicationViews = () => {
     return (
@@ -19,22 +19,29 @@ export const ApplicationViews = () => {
                 </MasterProvider>
             </QuoteProvider>
 
-                <QuoteProvider>
-                    <NoteProvider>
-                        <Route exact path="/notes/create">
-                            <NoteForm />
-                            <NoteList />
-                        </Route>
-                    </NoteProvider>
-                </QuoteProvider>
+            <QuoteProvider>
+                <NoteProvider>
+                    <Route exact path="/notes">
+                        <NoteList />
+                    </Route>
+                </NoteProvider>
+            </QuoteProvider>
 
-                <QuoteProvider>
-                    <NoteProvider>
-                        <Route exact path="/notes">
-                            <NoteList />
-                        </Route>
-                    </NoteProvider>
-                </QuoteProvider>
+            <QuoteProvider>
+                <NoteProvider>
+                    <Route exact path="/quotes/:randomQuoteId(\d+)/notes/create">
+                        {/* number indicator */}
+                        <NoteForm />
+                        <NoteList />
+                    </Route>
+                </NoteProvider>
+            </QuoteProvider>
+
+            <MasterProvider>
+                <Route path="/masters">
+                    <MasterSelect />
+                </Route>
+            </MasterProvider>
         </>
     )
 }

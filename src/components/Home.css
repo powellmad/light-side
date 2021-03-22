@@ -19,9 +19,34 @@ body {
 
 h1 {
     text-align: center;
+    margin-top: 40px;
 }
 
 .mastersQuotes {
     display: flex;
     justify-content: space-evenly;
+}
+
+.header__link {
+    color: white;
+    text-decoration: none;
+}
+
+.header__link:hover {
+    color: lavender;
+}
+
+.header__user {
+    display: flex;
+}
+
+.user__info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+header img {
+    width: 100px;
+    margin-left: 20px;
 }
