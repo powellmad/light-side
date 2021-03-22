@@ -12,7 +12,7 @@ export const NoteList = () => {
 
     return (
         <div className="noteComponent">
-            <h1>Padawan Journal</h1>
+            <h1>Padawan Notes</h1>
             <div className="note-list">
                 {notes.map(note => {
                     return <NoteCard key={note.id} note={note} />

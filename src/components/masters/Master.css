@@ -19,14 +19,23 @@
     width: 50%;
     background-color: lavender;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 130px;
+    align-content: center;
 
 }
 
+.master__avatar {
+    width: 150px;
+}
+
+.master__image {
+    width: 300px;
+}
+
 img {
-    width: 100%;
+    width: 100px;
     height: auto;
     border-radius: 5%;
 }
@@ -34,7 +43,22 @@ img {
 .masterDetail {
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 }
+
 .masterDetail div, button {
     margin: 15px;
+}
+
+button {
+    width: 100px;
+    align-self: center
+}
+
+h2 {
+    text-align: center;
+}
+
+.masterDetail Link {
+    align-self: center;
 }

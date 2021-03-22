@@ -1,25 +1,30 @@
 import React, { useContext, useEffect, useState } from "react"
 import { NoteContext } from "./NoteProvider"
-import { useHistory } from 'react-router-dom'
+import { QuoteContext } from "../quotes/QuoteProvider"
+import { useHistory, useParams } from 'react-router-dom'
 import "./Note.css"
 
 export const NoteForm = () => {
     const { addNote, getNotes } = useContext(NoteContext)
+    const { quoteById, getQuoteById } = useContext(QuoteContext)
 
     const timestamp = new Date().toLocaleString()
-    const currentUser = parseInt(sessionStorage.getItem("app_user_id "))
+    const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+
+    const {randomQuoteId} = useParams()
 
     const [note, setNote] = useState({
         "id": "",
         "text": "",
         "timestamp": timestamp,
-        // "quoteId": selectedQuote,
+        "quoteId": randomQuoteId,
         "userId": currentUser
     })
 
     const history = useHistory();
     useEffect(() => {
         getNotes()
+        .then(getQuoteById(randomQuoteId))
     }, [])
 
     const handleControlledInputChange = (event) => {
@@ -41,7 +46,7 @@ export const NoteForm = () => {
                 id: note.id,
                 text: note.text,
                 timestamp: note.timestamp,
-                // quoteId: note.quoteId,
+                quoteId: note.quoteId,
                 userId: note.userId
             })
                 .then(() => history.push("/notes"))
@@ -52,7 +57,7 @@ export const NoteForm = () => {
     return (
         <form className="noteForm">
             <h2>Create Note:</h2>
-            <div>"Quote"</div>
+            <div>{quoteById.mastertext}</div>
             <fieldset>
                 <div className="form-group">
                     <textarea name="text" id="text" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="New Note" value={note.text}></textarea>

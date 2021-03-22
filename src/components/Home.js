@@ -12,7 +12,7 @@ export const Home = () => {
 
     return (
     <div className="home">
-        <h1>Welcome, Padawan!</h1>
+        <h1>Welcome, Padawan Madison!</h1>
         <div className="mastersQuotes">
             <MasterDetail />
             <QuoteSelection />
