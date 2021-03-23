@@ -2,12 +2,20 @@
     padding: 20px;
     background-color: lavender;
     width: 50%;
-    margin: 40px;
+    height: auto;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .quote_text {
     font-size: 36pt;
     padding: 15px;
     margin: 20px;
+}
+
+.buttonContainer {
+    justify-items: right;
 }
 

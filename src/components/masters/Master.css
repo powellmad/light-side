@@ -16,7 +16,7 @@
 }
 
 .masterComponent {
-    width: 50%;
+    width: 60%;
     background-color: lavender;
     margin: auto;
     padding: 20px;
@@ -24,6 +24,12 @@
     margin-bottom: 130px;
     align-content: center;
 
+}
+
+.master__selected {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .master__avatar {
@@ -53,12 +59,4 @@ img {
 button {
     width: 100px;
     align-self: center
-}
-
-h2 {
-    text-align: center;
-}
-
-.masterDetail Link {
-    align-self: center;
 }

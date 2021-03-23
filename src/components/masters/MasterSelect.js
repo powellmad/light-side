@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react"
 import { MasterContext } from "./MasterProvider"
+import { Link } from "react-router-dom"
 import { Master } from "./Master"
 import "./Master.css"
 
@@ -12,7 +13,7 @@ export const MasterSelect = () => {
 
     return (
         <div className="masterComponent">
-            <h1>Choose Your Jedi Master:</h1>
+            <h1>Choose Your Jedi Instructor:</h1>
             <div className="master-list">
                 {masters.map(master => {
                     return <Master key={master.id} master={master} />
@@ -31,7 +32,8 @@ export const MasterDetails = () => {
 
     return (
         <div className="masterComponent">
-            <h1>Choose Your Jedi Master:</h1>
+            <Link to="/" className="master-close">x</Link>
+            <h1>Choose Your Jedi Instructor:</h1>
             <div className="master-list">
                 {masters.map(master => {
                     return <Master key={master.id} master={master} />
