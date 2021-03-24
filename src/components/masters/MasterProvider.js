@@ -11,19 +11,6 @@ export const MasterProvider = (props) => {
         .then(setMasters)
     }
 
-    // const updateMaster = masterId => {
-    //     return fetch(`http://localhost:8088/users/${masterId}`, {
-    //       method: "PATCH",
-    //       headers: {
-    //         "Content-Type": "application/json"
-    //       },
-    //       body: JSON.stringify({
-    //           masterId
-    //       })
-    //     })
-    //       .then(getMasters)
-    //   }
-
     return (
         <MasterContext.Provider value={{
             masters, getMasters
