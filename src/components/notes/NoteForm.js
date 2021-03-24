@@ -69,7 +69,7 @@ export const NoteForm = () => {
     }
 
     useEffect(() => {
-        getQuoteById().then(() => {
+        getQuoteById(randomQuoteId).then(() => {
           if (noteId) {
             getNoteById(noteId)
             .then(note => {
