@@ -22,7 +22,8 @@ export const MasterDetail = () => {
     return (
         <div className="masterDetail master__{master.id}">
             <div className="master__selected">
-                <h2 className="master__name">Your Master, {master?.name}</h2>
+                <h2 className="master__name">Your Master</h2>
+                <h2 className="master__name">{master?.name}</h2>
                 <Link to="/masters" className="master__selection">Choose Jedi</Link>
             </div>
             <img className="master__image" src={`./jedi/${master?.image}.png`} alt={`${master?.image}`} />

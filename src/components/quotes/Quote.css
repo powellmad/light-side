@@ -1,8 +1,7 @@
 .quoteComponent {
     padding: 30px 10px;
     background-color: white;
-    width: 60%;
-    height: 60%;
+    flex-basis: 55%;
     margin: auto;
     display: flex;
     flex-direction: column;
