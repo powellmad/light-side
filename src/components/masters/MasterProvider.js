@@ -11,22 +11,22 @@ export const MasterProvider = (props) => {
         .then(setMasters)
     }
 
-    const updateMaster = id => {
-        return fetch(`http://localhost:8088/masters/${id}?`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-              masterId: ""
-          })
-        })
-          .then(getMasters)
-      }
+    // const updateMaster = masterId => {
+    //     return fetch(`http://localhost:8088/users/${masterId}`, {
+    //       method: "PATCH",
+    //       headers: {
+    //         "Content-Type": "application/json"
+    //       },
+    //       body: JSON.stringify({
+    //           masterId
+    //       })
+    //     })
+    //       .then(getMasters)
+    //   }
 
     return (
         <MasterContext.Provider value={{
-            masters, getMasters, updateMaster
+            masters, getMasters
             }}>
                 {props.children}
         </MasterContext.Provider>

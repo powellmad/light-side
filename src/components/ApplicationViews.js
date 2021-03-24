@@ -45,7 +45,7 @@ export const ApplicationViews = () => {
             </QuoteProvider>
 
             <MasterProvider>
-                <Route path="/masters">
+                <Route exact path="/masters/edit/:masterId(\d+)">
                     <MasterSelect />
                 </Route>
             </MasterProvider>

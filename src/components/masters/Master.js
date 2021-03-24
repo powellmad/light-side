@@ -10,4 +10,3 @@ export const Master = ({ master }) => {
         </div >
     )
 }
-// ./../../images/jedi/${master?.image}`.png
