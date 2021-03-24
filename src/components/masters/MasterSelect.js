@@ -25,23 +25,3 @@ export const MasterSelect = () => {
         </div>
     )
 }
-
-export const MasterDetails = () => {
-    const { masters, getMasters } = useContext(MasterContext)
-    const { users, getUserById } = useContext(UserContext)
-    const [userObject, setUserObject] = useState({})
-    
-    const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
-
-    useEffect(() => {
-        getUserById(currentUser)
-        .then(setUserObject)
-        .then(getMasters)
-    }, [])
-
-    return (
-            <div className="masterSelection">
-                <MasterDetail master={userObject.master}/>
-            </div>
-    )
-}

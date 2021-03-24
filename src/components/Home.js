@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event"
 import React from "react"
 import { QuoteSelection } from "./quotes/QuoteSelection"
-import { MasterDetails } from "./masters/MasterSelect"
+import { MasterDetail } from "./masters/MasterDetail"
 import { userStorageKey } from "../auth/authSettings"
 import "./Home.css"
 import { MasterProvider } from "./masters/MasterProvider"
@@ -20,7 +20,7 @@ export const Home = () => {
                 <MasterProvider>
                     <UserProvider>
                         <QuoteProvider>
-                            <MasterDetails />
+                            <MasterDetail />
                             <QuoteSelection />
                         </QuoteProvider>
                     </UserProvider>
