@@ -16,9 +16,20 @@ export const UserProvider = (props) => {
             .then(res => res.json())
     }
     
+    const updateMaster = (user) => {
+        return fetch(`http://localhost:8088/users/${user.id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(user)
+        })
+          .then(getUsers)
+    }
+    
     return (
         <UserContext.Provider value={{
-            users, getUsers, getUserById
+            users, getUsers, getUserById, updateMaster
         }}>
             {props.children}
         </UserContext.Provider>

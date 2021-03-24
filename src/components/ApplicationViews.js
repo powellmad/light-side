@@ -7,6 +7,7 @@ import { NoteList } from "./notes/NoteList"
 import { NoteForm } from "./notes/NoteForm"
 import { MasterProvider } from "./masters/MasterProvider"
 import { MasterSelect } from "./masters/MasterSelect"
+import { UserProvider } from "./users/UserProvider"
 
 export const ApplicationViews = () => {
     return (
@@ -45,9 +46,11 @@ export const ApplicationViews = () => {
             </QuoteProvider>
 
             <MasterProvider>
-                <Route exact path="/masters/edit/:masterId(\d+)">
+                <UserProvider>
+                <Route path="/masters">
                     <MasterSelect />
                 </Route>
+                </UserProvider>
             </MasterProvider>
         </>
     )
