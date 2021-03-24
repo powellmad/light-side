@@ -30,9 +30,16 @@ export const ApplicationViews = () => {
             <QuoteProvider>
                 <NoteProvider>
                     <Route exact path="/quotes/:randomQuoteId(\d+)/notes/create">
-                        {/* number indicator */}
                         <NoteForm />
                         <NoteList />
+                    </Route>
+                </NoteProvider>
+            </QuoteProvider>
+
+            <QuoteProvider>
+                <NoteProvider>
+                    <Route exact path="/notes/edit/:noteId(\d+)">
+                        <NoteForm />
                     </Route>
                 </NoteProvider>
             </QuoteProvider>

@@ -3,10 +3,10 @@ import React from "react"
 import { QuoteSelection } from "./quotes/QuoteSelection"
 import { MasterDetails } from "./masters/MasterSelect"
 import { userStorageKey } from "../auth/authSettings"
-import "./Home.css"
 import { MasterProvider } from "./masters/MasterProvider"
 import { QuoteProvider } from "./quotes/QuoteProvider"
 import { UserProvider } from "./users/UserProvider"
+import "./Home.css"
 
 
 export const Home = () => {

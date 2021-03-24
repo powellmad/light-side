@@ -12,7 +12,7 @@ export const Header = () => (
         <div className="header__user">
             <div className="user__info">
                 <h3>Welcome, Padawan Madison!</h3>
-                <Link className="header__link" to="notes">My Padawan Notes</Link>
+                <Link className="header__link" to="/notes">My Padawan Notes</Link>
             </div>
             <img src={"./jedi/mad.png"} alt="user's avatar" />
             {/* light saber icon from database */}

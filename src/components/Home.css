@@ -13,7 +13,7 @@ body {
 
 .header__logo {
     font-size: 24px;
-    align-self: flex-start;
+    align-self: flex-center;
     color: white;
     text-decoration: none;
 }
@@ -50,4 +50,18 @@ h1 {
 header img {
     width: 100px;
     margin-left: 20px;
+}
+
+.footer {
+    display: flex;
+    background-color: slateblue;
+    color: white;
+}
+
+.footer p {
+    margin: 10px 5px;
+}
+
+.footer a {
+    color: white;
 }
