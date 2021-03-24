@@ -12,11 +12,11 @@ export const LightSide = () => (
       <Route render={() => {
         if (sessionStorage.getItem(userStorageKey)) {
           return (
-            <>
+            <div className="light-side">
               <Header />
               <ApplicationViews />
               <Footer />
-            </>
+            </div>
           )
         } else {
           return <Redirect to="/login" />;
