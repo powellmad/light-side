@@ -14,7 +14,7 @@ export const MasterSelect = () => {
 
     useEffect(() => {
         getMasters()
-        .then(getUserById)
+        .then(getUserById(currentUser))
     }, [])
 
     return (
