@@ -16,11 +16,14 @@ export const NoteList = () => {
     const handleDelete = (id) => {
         console.log("this is the delete button", id)
         deleteNote(id)
-            .then(() => {
-                history.push("/notes")
-            })
+        .then(() => {
+            history.push("/notes")
+        })
     }
-            
+
+    const UserDelete = (note) => (
+                <button className="btn btn-primary" onClick={() => handleDelete(note.id)}> Delete </button>
+            )    
 
     return (
         <div className="noteComponent">
@@ -30,10 +33,11 @@ export const NoteList = () => {
                     return (
                         <div className="noteCard">
                             <NoteCard key={note.id} note={note} />
-                            <button className="delete-button" onClick={() => handleDelete(note.id)}> Delete </button>
+                            {UserDelete(note)}
                         </div>)
                 })}
             </div>
         </div>
     )
-    }
+
+}

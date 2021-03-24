@@ -8,7 +8,7 @@ export const MasterDetail = ({master}) => {
             <h2 className="master__name">Your Master, {master?.name}</h2>
             <Link to="/masters" className="master__selection">choose</Link>
         </div>
-        <img className="master__image" src={"./jedi/{}}.png"} alt={`${master?.image}`} />
+        <img className="master__image" src={`./jedi/${master?.image}.png`} alt={`${master?.image}`} />
         <button className="master__about">About {master?.name}</button>
     </div>)
 }

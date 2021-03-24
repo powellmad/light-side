@@ -5,25 +5,38 @@
     align-items: flex-end;
 }
 
-.master {
-    margin: 10px;
-    text-align: center;
-    width: 20%;
+.master-list div:hover {
+    background-color: whitesmoke;
 }
 
-.master div {
-    margin: 5px;
+.master {
+    text-align: center;
+    width: 20%;
+    margin: 10px;
+    padding: 5px;
+    font-size: 14pt;
+}
+
+/* Styling for Master Detail, when the user selects their master */
+.masterSelection {
+    width: 30%;
+    background-color: white;
+    margin: 30px auto;
+    align-content: center;   
+    border-radius: 10px;
 }
 
 .masterComponent {
     width: 60%;
-    background-color: lavender;
+    background-color: white;
     margin: auto;
     padding: 20px;
-    margin-top: 30px;
-    margin-bottom: 130px;
+    margin: 40px auto;
     align-content: center;
+}
 
+.masterComponent Link {
+    justify-self: right;
 }
 
 .master__selected {
@@ -34,10 +47,16 @@
 
 .master__avatar {
     width: 150px;
+    margin: auto;
 }
 
 .master__image {
-    width: 300px;
+    width: 350px;
+    margin: auto;
+}
+
+h2 {
+    margin: 5px;
 }
 
 img {
@@ -49,7 +68,8 @@ img {
 .masterDetail {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    text-align: center;
+    justify-content: center;
 }
 
 .masterDetail div, button {

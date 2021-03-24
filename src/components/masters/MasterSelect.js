@@ -16,12 +16,12 @@ export const MasterSelect = () => {
     return (
         <div className="masterComponent">
             <h1>Choose Your Jedi Instructor:</h1>
-            <Link to="/" className="master-close">x</Link>
             <div className="master-list">
                 {masters.map(master => {
                     return <Master key={master.id} master={master} />
                 })}
             </div>
+                <Link to="/" className="master-close">Close</Link>
         </div>
     )
 }
@@ -40,11 +40,8 @@ export const MasterDetails = () => {
     }, [])
 
     return (
-        <div className="masterComponent">
-            <h1>Choose Your Jedi Instructor:</h1>
-            <div className="master-selection">
+            <div className="masterSelection">
                 <MasterDetail master={userObject.master}/>
             </div>
-        </div>
     )
 }

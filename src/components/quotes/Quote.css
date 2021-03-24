@@ -1,12 +1,13 @@
 .quoteComponent {
-    padding: 20px;
-    background-color: lavender;
-    width: 50%;
-    height: auto;
-    margin: 30px;
+    padding: 30px 10px;
+    background-color: white;
+    width: 60%;
+    height: 60%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 10px;
 }
 
 .quote_text {
@@ -18,4 +19,3 @@
 .buttonContainer {
     justify-items: right;
 }
-

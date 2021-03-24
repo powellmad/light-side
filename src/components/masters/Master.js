@@ -1,6 +1,5 @@
 import React from "react"
 
-
 export const Master = ({ master }) => {
     return (
         <div className="master master__{master.id}">
