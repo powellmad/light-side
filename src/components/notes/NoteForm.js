@@ -57,10 +57,10 @@ export const NoteForm = () => {
     return (
         <form className="noteForm">
             <h2>Create Note:</h2>
-            <div>{quoteById.mastertext}</div>
+            <p>"{quoteById.mastertext}"</p>
             <fieldset>
                 <div className="form-group">
-                    <textarea name="text" id="text" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="New Note" value={note.text}></textarea>
+                    <textarea name="text" id="text" cols="100" rows="5" onChange={handleControlledInputChange} required autoFocus className="form-control" value={note.text}></textarea>
                 </div>
             </fieldset>
             <button className="btn btn-primary" onClick={handleClickSaveNote}>

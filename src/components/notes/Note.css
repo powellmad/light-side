@@ -1,14 +1,15 @@
 .noteComponent {
-    padding: 30px;
+    padding: 10px;
 }
 
 .noteCard, .noteForm {
-    border: lavender 40px solid;
-    padding: 30px;
+    border: rgb(198, 198, 233) 30px solid;
+    padding: 25px 25px 10px;
     font-size: 20px;
     margin: auto;
     width: 70%;
     margin-top: 30px;
+    background-color: white;
 }
 
 .noteCard div {
@@ -17,4 +18,13 @@
 
 .noteForm {
     text-align: center;
+}
+
+.note__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-button {
+    margin-left: 85%;
 }

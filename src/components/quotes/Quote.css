@@ -1,8 +1,13 @@
 .quoteComponent {
-    padding: 20px;
-    background-color: lavender;
-    width: 50%;
-    margin: 40px;
+    padding: 30px 10px;
+    background-color: white;
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
 }
 
 .quote_text {
@@ -11,3 +16,6 @@
     margin: 20px;
 }
 
+.buttonContainer {
+    justify-items: right;
+}
