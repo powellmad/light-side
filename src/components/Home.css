@@ -51,3 +51,17 @@ header img {
     width: 100px;
     margin-left: 20px;
 }
+
+.footer {
+    display: flex;
+    background-color: slateblue;
+    color: white;
+}
+
+.footer p {
+    margin: 10px 5px;
+}
+
+.footer a {
+    color: white;
+}
