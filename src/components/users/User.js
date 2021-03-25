@@ -1,0 +1,1 @@
+// User.js will eventually render the user's info in a User Profile and have funtionality to edit name etc,

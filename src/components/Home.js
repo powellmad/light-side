@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event"
 import React from "react"
 import { userStorageKey } from "../auth/authSettings"
 import { QuoteProvider } from "./quotes/QuoteProvider"
@@ -13,6 +12,7 @@ export const Home = () => {
     const currentUser = sessionStorage.getItem(userStorageKey)
     // console.log("the current user is", currentUser)
 
+// on the homepage, the user sees their selected Jedi Master and a randomized motivational quote
     return (
         <div className="home">
             <div className="jediQuotes">

@@ -24,7 +24,6 @@ export const NoteProvider = (props) => {
             },
             body: JSON.stringify(newNote)
         })
-        .then(response => response.json())
     }
 
     const deleteNote = id => {
