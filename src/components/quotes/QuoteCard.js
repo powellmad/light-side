@@ -1,10 +1,19 @@
-import React from "react"
-import { useHistory } from "react-router-dom"
+import React, { useState, useContext, useEffect } from "react"
+import { UserContext } from "../users/UserProvider"
 
+export const QuoteCard = ({ quote }) => {
+    const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+    const {getUserById } = useContext(UserContext)
+    const [userObject, setUserObject] = useState({})
 
-export const QuoteCard = ({ quote }) => (
+    useEffect(() => { 
+        getUserById(currentUser)
+            .then(setUserObject)
+    }, [])
 
-    <section className="quote">
-        <div className="quote_text">"{quote?.jeditext}"</div>
-    </section>
-)
+    return (
+        <section className="quote">
+            <div className="quote_text">"{userObject.jediId === 1 ? quote?.yodatext : quote?.jeditext}"</div>
+        </section>
+    )
+}
