@@ -71,7 +71,9 @@ img {
     flex-direction: column;
     text-align: center;
     width: 30%;
-    margin: 20px;
+    margin: 40px;
+    background-color: lavender;
+    border-radius: 5%;
 }
 
 .jediDetail div, button {
