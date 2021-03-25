@@ -37,6 +37,14 @@ export const ApplicationViews = () => {
                 </NoteProvider>
             </QuoteProvider>
 
+            <QuoteProvider>
+                <NoteProvider>
+                    <Route exact path="/notes/edit/:noteId(\d+)">
+                        <NoteForm />
+                    </Route>
+                </NoteProvider>
+            </QuoteProvider>
+
             <JediProvider>
                 <UserProvider>
                 <Route path="/jedi">
