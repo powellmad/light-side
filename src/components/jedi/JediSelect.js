@@ -7,10 +7,12 @@ import "./Jedi.css"
 export const JediSelect = () => {
     const { jedi, getJedi } = useContext(JediContext)
     
+    
     useEffect(() => {
         getJedi()
     }, [])
     
+    // Maps through jedi (get request) and renders a list of Jedi options
     return (
         <div className="jediComponent">
             <h1>Choose Your Jedi Instructor:</h1>

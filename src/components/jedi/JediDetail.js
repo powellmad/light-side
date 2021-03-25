@@ -4,9 +4,10 @@ import { UserContext } from "../users/UserProvider"
 import { JediContext } from "./JediProvider"
 import "./Jedi.css"
 
+// The single jedi card of the user's current master rendered on the DOM.
 export const JediDetail = () => {
-    const {getJedi} = useContext(JediContext)
-    const {getUserById } = useContext(UserContext)
+    const { getJedi } = useContext(JediContext)
+    const { getUserById } = useContext(UserContext)
     const [userObject, setUserObject] = useState({})
 
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))

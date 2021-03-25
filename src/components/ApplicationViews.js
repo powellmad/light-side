@@ -12,6 +12,7 @@ import { UserProvider } from "./users/UserProvider"
 export const ApplicationViews = () => {
     return (
         <>
+            {/* Home Page */}
             <QuoteProvider>
                 <JediProvider>
                     <Route exact path="/">
@@ -20,14 +21,18 @@ export const ApplicationViews = () => {
                 </JediProvider>
             </QuoteProvider>
 
+            {/* Route for Padawan Notes */}
             <QuoteProvider>
-                <NoteProvider>
-                    <Route exact path="/notes">
-                        <NoteList />
-                    </Route>
-                </NoteProvider>
+                <UserProvider>
+                    <NoteProvider>
+                        <Route exact path="/notes">
+                            <NoteList />
+                        </Route>
+                    </NoteProvider>
+                </UserProvider>
             </QuoteProvider>
 
+            {/* Route to add a new note */}
             <QuoteProvider>
                 <NoteProvider>
                     <Route exact path="/quotes/:randomQuoteId(\d+)/notes/create">
@@ -37,6 +42,7 @@ export const ApplicationViews = () => {
                 </NoteProvider>
             </QuoteProvider>
 
+            {/* Route to edit an existing note */}
             <QuoteProvider>
                 <NoteProvider>
                     <Route exact path="/notes/edit/:noteId(\d+)">
@@ -45,11 +51,12 @@ export const ApplicationViews = () => {
                 </NoteProvider>
             </QuoteProvider>
 
+            {/* When choose jedi is clicked, this list of jedi options are rendered*/}
             <JediProvider>
                 <UserProvider>
-                <Route path="/jedi">
-                    <JediSelect />
-                </Route>
+                    <Route path="/jedi">
+                        <JediSelect />
+                    </Route>
                 </UserProvider>
             </JediProvider>
         </>

@@ -1,7 +1,33 @@
 body {
     margin: 0;
     background-color: lavender;
+    min-height: fit-content;
 }
+
+h1 {
+    text-align: center;
+    padding: 10px 20px 30px;
+}
+
+.light-side {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.root {
+    position: relative;
+}
+  
+
+/* Styling for the main container for the quote on home */
+.jediQuotes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 4;
+}
+
+/* Styling for header */
 .header {
     background-color: slateblue;
     margin: 0;
@@ -16,16 +42,6 @@ body {
     align-self: flex-center;
     color: white;
     text-decoration: none;
-}
-
-h1 {
-    text-align: center;
-    padding: 10px 20px 30px;
-}
-
-.jediQuotes {
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .header__link {
@@ -52,10 +68,15 @@ header img {
     margin-left: 20px;
 }
 
+/* Styling for footer */
 .footer {
     display: flex;
     background-color: slateblue;
     color: white;
+    margin-top: 10%;
+    position: static;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer p {
