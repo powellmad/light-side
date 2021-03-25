@@ -6,7 +6,7 @@ import "./Note.css"
 
 export const NoteForm = () => {
     const { addNote, getNotes, getNoteById, updateNote } = useContext(NoteContext)
-    const { quoteById, getQuoteById } = useContext(QuoteContext)
+    const {getQuotes, quoteById, getQuoteById } = useContext(QuoteContext)
 
     const timestamp = new Date().toLocaleString()
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
@@ -23,11 +23,11 @@ export const NoteForm = () => {
 
     const [isLoading, setIsLoading] = useState(true);
     const { noteId } = useParams()
-    const history = useHistory();
+    const history = useHistory()
 
     useEffect(() => {
-        getQuoteById(randomQuoteId)
-        .then(getNotes)
+        getNotes()
+            .then(getQuoteById(randomQuoteId))
     }, [])
 
     const handleControlledInputChange = (event) => {
@@ -46,47 +46,46 @@ export const NoteForm = () => {
             window.alert("Please create a note")
         } else {
             setIsLoading(true);
-            {
-                noteId ?
-                    updateNote({
-                        id: note.id,
-                        text: note.text,
-                        timestamp: note.timestamp,
-                        quoteId: note.quoteId,
-                        userId: note.userId
-                    })
-                        .then(() => history.push(`/notes`))
-                    :
-                    addNote({
-                        id: note.id,
-                        text: note.text,
-                        timestamp: note.timestamp,
-                        quoteId: note.quoteId,
-                        userId: note.userId
-                    })
-                        .then(() => history.push("/notes"))
+            {noteId ?
+                updateNote({
+                    id: note.id,
+                    text: note.text,
+                    timestamp: note.timestamp,
+                    quoteId: note.quoteId,
+                    userId: note.userId
+                })
+                    .then(() => history.push(`/notes`))
+                :
+                addNote({
+                    id: note.id,
+                    text: note.text,
+                    timestamp: note.timestamp,
+                    quoteId: note.quoteId,
+                    userId: note.userId
+                })
+                    .then(() => history.push("/notes"))
             }
         }
     }
 
     useEffect(() => {
-        getQuoteById().then(() => {
-            if (noteId) {
-                getNoteById(noteId)
-                    .then(note => {
-                        setNote(note)
-                        setIsLoading(false)
-                    })
-            } else {
+        getQuoteById(randomQuoteId).then(() => {
+          if (noteId) {
+            getNoteById(noteId)
+            .then(note => {
+                setNote(note)
                 setIsLoading(false)
-            }
+            })
+          } else {
+            setIsLoading(false)
+          }
         })
-    }, [])
+      }, [])
 
     return (
         <form className="noteForm">
-            <h2>{noteId ? "Edit Note" : "Create Note"}</h2>
-            <p>"{noteId ? note.quote?.mastertext : quoteById.mastertext}"</p>
+            <h2>Create Note:</h2>
+            <p>"{quoteById.jeditext}"</p>
             <fieldset>
                 <div className="form-group">
                     <textarea name="text" id="text" cols="100" rows="5" onChange={handleControlledInputChange} required autoFocus className="form-control" value={note.text}></textarea>

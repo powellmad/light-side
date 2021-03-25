@@ -1,31 +1,29 @@
 import userEvent from "@testing-library/user-event"
 import React from "react"
-import { QuoteSelection } from "./quotes/QuoteSelection"
-import { MasterDetail } from "./masters/MasterDetail"
 import { userStorageKey } from "../auth/authSettings"
-import "./Home.css"
-import { MasterProvider } from "./masters/MasterProvider"
 import { QuoteProvider } from "./quotes/QuoteProvider"
+import { QuoteSelection } from "./quotes/QuoteSelection"
 import { UserProvider } from "./users/UserProvider"
+import { JediProvider } from "./jedi/JediProvider"
+import { JediDetail } from "./jedi/JediDetail"
+import "./Home.css"
 
 
 export const Home = () => {
     const currentUser = sessionStorage.getItem(userStorageKey)
-    console.log("the current user is", currentUser)
+    // console.log("the current user is", currentUser)
 
     return (
         <div className="home">
-            {/* <h1>Welcome, Padawan Madison!</h1> */}
-            <div className="mastersQuotes">
-                <MasterProvider>
+            <div className="jediQuotes">
+                <JediProvider>
                     <UserProvider>
                         <QuoteProvider>
-                            <MasterDetail />
+                            <JediDetail />
                             <QuoteSelection />
                         </QuoteProvider>
                     </UserProvider>
-                </MasterProvider>
-
+                </JediProvider>
             </div>
         </div>
     )

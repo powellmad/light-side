@@ -10,7 +10,7 @@ export const NoteProvider = (props) => {
         .then(res => res.json())
         .then(setNotes)
     }
-
+    
     const getNoteById = (id) => {
         return fetch(`http://localhost:8088/userNotes/${id}?_expand=quote`)
         .then(res => res.json())
