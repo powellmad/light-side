@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: lavender;
+    min-height: fit-content;
 }
 
 h1 {
@@ -8,10 +9,22 @@ h1 {
     padding: 10px 20px 30px;
 }
 
+.light-side {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.root {
+    position: relative;
+}
+  
+
 /* Styling for the main container for the quote on home */
 .jediQuotes {
     display: flex;
     justify-content: space-evenly;
+    flex-grow: 4;
 }
 
 /* Styling for header */
@@ -60,6 +73,10 @@ header img {
     display: flex;
     background-color: slateblue;
     color: white;
+    margin-top: 10%;
+    position: static;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer p {

@@ -5,16 +5,15 @@ import { NoteCard } from "./NoteCard"
 import { useHistory } from "react-router-dom"
 import "./Note.css"
 
-
 export const NoteList = () => {
     const { getUserById } = useContext(UserContext)
     const { notes, getNotes, deleteNote } = useContext(NoteContext)
     const [userObject, setUserObject] = useState({})
-    
+
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
     const history = useHistory()
 
-    useEffect(() => { 
+    useEffect(() => {
         getUserById(currentUser)
             .then(setUserObject)
             .then(getNotes)
@@ -38,18 +37,18 @@ export const NoteList = () => {
             <div className="note-list">
                 {notes.map(note => {
                     if (note.userId === userObject.id) {
-                    return (
-                        <div className="noteCard">
-                            <NoteCard key={note.id} note={note} />
-                            {UserDelete(note)}
-                            <button onClick={() => {
-                                history.push(`/notes/edit/${note.id}`)
-                            }}>Edit</button>
-                        </div>)
-                    } else { 
                         return (
-                        <div></div>
-                    )
+                            <div className="noteCard">
+                                <NoteCard key={note.id} note={note} />
+                                {UserDelete(note)}
+                                <button onClick={() => {
+                                    history.push(`/notes/edit/${note.id}`)
+                                }}>Edit</button>
+                            </div>)
+                    } else {
+                        return (
+                            <div></div>
+                        )
                     }
                 })}
             </div>

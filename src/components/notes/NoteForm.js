@@ -89,7 +89,7 @@ export const NoteForm = () => {
             <p>"{noteId ? note.quote?.jeditext : quoteById.jeditext}"</p>
             <fieldset>
                 <div className="form-group">
-                    <textarea name="text" id="text" cols="100" rows="5" onChange={handleControlledInputChange} required autoFocus className="form-control" value={note.text}></textarea>
+                    <textarea name="text" id="text" cols="90" rows="5" onChange={handleControlledInputChange} required autoFocus className="form-control" value={note.text}></textarea>
                 </div>
             </fieldset>
             <button className="btn btn-primary" onClick={handleClickSaveNote}>
