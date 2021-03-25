@@ -6,7 +6,7 @@ export const JediProvider = (props) => {
     const [jedi, setJedi] = useState([])
     
     const getJedi = () => {
-        return fetch(`http://localhost:8088/jedi`)
+        return fetch(`http://localhost:8088/jedis`)
         .then(res => res.json())
         .then(setJedi)
     }

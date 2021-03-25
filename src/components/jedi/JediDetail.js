@@ -17,16 +17,14 @@ export const JediDetail = () => {
             .then(getJedi)
     }, [])
 
-    const jediMaster = userObject.jedi
-
     return (
         <div className="jediDetail jedi__{jedi.id}">
             <div className="jedi__selected">
-                <h2 className="jedi__name">Your Jedi Master, {jediMaster?.name}</h2>
+                <h2 className="jedi__name">Your Jedi Master, {userObject.jedi?.name}</h2>
                 <Link to="/jedi" className="jedi__selection">Choose Jedi</Link>
             </div>
-            <img className="jedi__image" src={`./jediAvatars/${jediMaster?.image}.png`} alt={`${jediMaster?.image}`} />
-            <button className="jedi__about">About {jediMaster?.name}</button>
+            <img className="jedi__image" src={`./jediAvatars/${userObject?.jedi?.image}.png`} alt={`${userObject.jedi?.image}`} />
+            <button className="jedi__about">About {userObject.jedi?.name}</button>
         </div>
     )
 }
