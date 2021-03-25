@@ -1,10 +1,12 @@
 import React from "react"
-import { useHistory } from "react-router-dom"
 
 
-export const QuoteCard = ({ quote }) => (
+export const QuoteCard = ({ quote }) => {
+    const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
 
-    <section className="quote">
-        <div className="quote_text">"{quote?.jeditext}"</div>
-    </section>
-)
+    return (
+        <section className="quote">
+            <div className="quote_text">"{currentUser.jediId === 1 ? quote?.yodatext : quote?.jeditext}"</div>
+        </section>
+    )
+}
