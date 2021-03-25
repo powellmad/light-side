@@ -18,15 +18,15 @@ export const UserProvider = (props) => {
     
     const updateJedi = (user) => {
         return fetch(`http://localhost:8088/users/${user.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(user)
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(user)
         })
-          .then(getUsers)
+            .then(getUsers)
     }
-    
+
     return (
         <UserContext.Provider value={{
             users, getUsers, getUserById, updateJedi
