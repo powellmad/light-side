@@ -29,11 +29,12 @@
 
 .jediComponent {
     width: 60%;
-    background-color: white;
+    background-color: #FED8B1;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     margin: 40px auto;
     align-content: center;
+    border-radius: 2%;
 }
 
 .jediComponent Link {
@@ -49,6 +50,10 @@
 .jedi__avatar {
     width: 150px;
     margin: auto;
+}
+
+.jedi__name {
+    font-size: 28pt;
 }
 
 .jedi__image {
@@ -72,7 +77,7 @@ img {
     text-align: center;
     width: 30%;
     margin: 40px;
-    background-color: lavender;
+    background-color: #F4E4CD;
     border-radius: 5%;
 }
 

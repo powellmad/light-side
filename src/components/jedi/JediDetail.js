@@ -21,7 +21,7 @@ export const JediDetail = () => {
     return (
         <div className="jediDetail jedi__{jedi.id}">
             <div className="jedi__selected">
-                <h2 className="jedi__name">Your Jedi Master</h2>
+                <h2 className="jedi__header">Your Jedi Master</h2>
                 <h2 className="jedi__name">{userObject.jedi?.name}</h2>
                 <Link to="/jedi" className="jedi__selection">Choose Jedi</Link>
             </div>

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: lavender;
+    background-color: #F4E4CD;
     min-height: fit-content;
     background-image: url("/src/images/tiny-stars.jpeg");
 }
@@ -30,9 +30,9 @@ h1 {
 
 /* Styling for header */
 .header {
-    background-color: slateblue;
+    background-color: #BB583A;
     margin: 0;
-    padding: 30px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     color: white;
@@ -51,7 +51,7 @@ h1 {
 }
 
 .header__link:hover {
-    color: lavender;
+    color: #F4E4CD;
 }
 
 .header__user {
@@ -72,7 +72,7 @@ header img {
 /* Styling for footer */
 .footer {
     display: flex;
-    background-color: slateblue;
+    background-color: #ECB176;
     color: white;
     margin-top: 10%;
     position: static;
