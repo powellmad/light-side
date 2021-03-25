@@ -5,19 +5,19 @@ import { QuoteProvider } from "./quotes/QuoteProvider"
 import { NoteProvider } from "./notes/NoteProvider"
 import { NoteList } from "./notes/NoteList"
 import { NoteForm } from "./notes/NoteForm"
-import { MasterProvider } from "./masters/MasterProvider"
-import { MasterSelect } from "./masters/MasterSelect"
+import { JediProvider } from "./jedi/JediProvider"
+import { JediSelect } from "./jedi/JediSelect"
 import { UserProvider } from "./users/UserProvider"
 
 export const ApplicationViews = () => {
     return (
         <>
             <QuoteProvider>
-                <MasterProvider>
+                <JediProvider>
                     <Route exact path="/">
                         <Home />
                     </Route>
-                </MasterProvider>
+                </JediProvider>
             </QuoteProvider>
 
             <QuoteProvider>
@@ -37,21 +37,13 @@ export const ApplicationViews = () => {
                 </NoteProvider>
             </QuoteProvider>
 
-            <QuoteProvider>
-                <NoteProvider>
-                    <Route exact path="/notes/edit/:noteId(\d+)">
-                        <NoteForm />
-                    </Route>
-                </NoteProvider>
-            </QuoteProvider>
-
-            <MasterProvider>
+            <JediProvider>
                 <UserProvider>
-                <Route path="/masters">
-                    <MasterSelect />
+                <Route path="/jedi">
+                    <JediSelect />
                 </Route>
                 </UserProvider>
-            </MasterProvider>
+            </JediProvider>
         </>
     )
 }
