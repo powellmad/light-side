@@ -5,14 +5,18 @@ import { useHistory, useParams } from 'react-router-dom'
 import "./Note.css"
 
 export const NoteForm = () => {
-    const { addNote, getNotes, getNoteById, updateNote } = useContext(NoteContext)
+    const {  getNotes, getNoteById, addNote, updateNote } = useContext(NoteContext)
     const { getQuotes, quoteById, getQuoteById } = useContext(QuoteContext)
 
     const timestamp = new Date().toLocaleString()
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+    const history = useHistory()
 
+    // useParams - values set dynamically in url
     const { randomQuoteId } = useParams()
+    const { noteId } = useParams()
 
+    // a state variable is set with empty placeholder values for inputs
     const [note, setNote] = useState({
         "id": "",
         "text": "",
@@ -20,11 +24,10 @@ export const NoteForm = () => {
         "quoteId": randomQuoteId,
         "userId": currentUser
     })
-
+    
     const [isLoading, setIsLoading] = useState(true);
-    const { noteId } = useParams()
-    const history = useHistory()
 
+    // fetches info for the single quote selected in the randomizer to get access to the quote text.
     useEffect(() => {
         getNotes()
             .then(getQuoteById(randomQuoteId))

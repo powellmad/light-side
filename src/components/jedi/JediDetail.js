@@ -12,6 +12,7 @@ export const JediDetail = () => {
 
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
 
+    // Gets currentUser info and sets it as a state variable
     useEffect(() => { 
         getUserById(currentUser)
             .then(setUserObject)
