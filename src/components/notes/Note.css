@@ -2,8 +2,13 @@
     padding: 10px;
 }
 
+h1 {
+    color: white;
+    font-size: 30pt;
+}
+
 .noteCard, .noteForm {
-    border: rgb(198, 198, 233) 30px solid;
+    border: #E8B087 30px solid;
     padding: 25px 25px 10px;
     font-size: 20px;
     margin: auto;

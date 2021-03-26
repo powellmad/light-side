@@ -14,7 +14,7 @@ export const Header = () => (
                 <h3>Welcome, Padawan Madison!</h3>
                 <Link className="header__link" to="/notes">My Padawan Notes</Link>
             </div>
-            <img src={"./jediAvatars/mad.png"} alt="user's avatar" />
+            <img src={"./jediAvatars/padawan.png"} alt="user's avatar" />
             {/* light saber icon from database */}
         </div>
     </header>

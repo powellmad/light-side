@@ -73,7 +73,7 @@ header img {
 .footer {
     display: flex;
     background-color: #ECB176;
-    color: white;
+    color: #1F1F1F;
     margin-top: 10%;
     position: static;
     bottom: 0;
@@ -85,5 +85,5 @@ header img {
 }
 
 .footer a {
-    color: white;
+    color: #1F1F1F;
 }
