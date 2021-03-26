@@ -18,7 +18,7 @@ export const Jedi = ({ jedi }) => {
 
     return (
         <div className="jedi jedi__{jedi.id} " onClick={selectJedi}>
-            <h4 className="jedi__name">{jedi?.name}</h4 >
+            <h4 className="jediSelect__name">{jedi?.name}</h4 >
             <div className="jedi__avatars">
                 <img className="jedi__avatar" src={`./jediAvatars/${jedi.image}.png`} alt={`${jedi?.image}`} />
             </div>

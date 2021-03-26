@@ -17,7 +17,7 @@ export const Header = () => (
             <div>
                 <img className="lightsaber" src={"./jediAvatars/jediImages/yellow.png"} />
             </div>
-            <img className="avatar" src={"./jediAvatars/mad.png"} alt="user's avatar" />
+            <img className="avatar" src={"./jediAvatars/padawan.png"} alt="user's avatar" />
         </div>
     </header>
 )
