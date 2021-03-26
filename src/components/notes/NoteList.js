@@ -28,7 +28,7 @@ export const NoteList = () => {
     }
 
     const UserDelete = (note) => (
-        <button className="btn btn-primary" onClick={() => handleDelete(note.id)}> Delete </button>
+        <button className="buttonStyle" onClick={() => handleDelete(note.id)}> Delete </button>
     )
 
     return (
@@ -36,6 +36,7 @@ export const NoteList = () => {
             <h1>Padawan Notes</h1>
             <div className="note-list">
                 {notes.map(note => {
+                    // If the useId on the notes array matching the current user id - display notes
                     if (note.userId === userObject.id) {
                         return (
                             <div className="noteCard">
@@ -47,7 +48,7 @@ export const NoteList = () => {
                             </div>)
                     } else {
                         return (
-                            <div></div>
+                            <></>
                         )
                     }
                 })}
