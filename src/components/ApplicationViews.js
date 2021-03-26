@@ -34,21 +34,25 @@ export const ApplicationViews = () => {
 
             {/* Route to add a new note */}
             <QuoteProvider>
-                <NoteProvider>
-                    <Route exact path="/quotes/:randomQuoteId(\d+)/notes/create">
-                        <NoteForm />
-                        <NoteList />
-                    </Route>
-                </NoteProvider>
+                <UserProvider>
+                    <NoteProvider>
+                        <Route exact path="/quotes/:randomQuoteId(\d+)/notes/create">
+                            <NoteForm />
+                            <NoteList />
+                        </Route>
+                    </NoteProvider>
+                </UserProvider>
             </QuoteProvider>
 
             {/* Route to edit an existing note */}
             <QuoteProvider>
-                <NoteProvider>
-                    <Route exact path="/notes/edit/:noteId(\d+)">
-                        <NoteForm />
-                    </Route>
-                </NoteProvider>
+                <UserProvider>
+                    <NoteProvider>
+                        <Route exact path="/notes/edit/:noteId(\d+)">
+                            <NoteForm />
+                        </Route>
+                    </NoteProvider>
+                </UserProvider>
             </QuoteProvider>
 
             {/* When choose jedi is clicked, this list of jedi options are rendered*/}
