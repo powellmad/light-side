@@ -14,6 +14,7 @@ export const Register = () => {
     }, [])
 
     const randomJediId = Math.floor(Math.random() * jedi.length)
+    console.log(randomJediId)
 
     const [registerUser, setRegisterUser] = useState({ 
         firstName: "", 
@@ -48,7 +49,8 @@ export const Register = () => {
                         },
                         body: JSON.stringify({
                             email: registerUser.email,
-                            name: `${registerUser.firstName} ${registerUser.lastName}`
+                            name: `${registerUser.firstName} ${registerUser.lastName}`,
+                            jediId: registerUser.jediId
                         })
                     })
                         .then(res => res.json())
@@ -67,7 +69,7 @@ export const Register = () => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <main className="register">
 
             <dialog className="dialog dialog--password" open={conflictDialog}>
                 <div>Account with that email address already exists</div>

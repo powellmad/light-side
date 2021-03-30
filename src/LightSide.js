@@ -8,28 +8,31 @@ import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
 import "./index.css"
 import "./auth/Login.css"
+import { JediProvider } from "./components/jedi/JediProvider"
 
 export const LightSide = () => (
   <>
-      <Route render={() => {
-        if (sessionStorage.getItem(userStorageKey)) {
-          return (
-            <div className="light-side">
-              <Header />
-              <ApplicationViews />
-              <Footer />
-            </div>
-          )
-        } else {
-          return <Redirect to="/login" />;
-        }
-      }} />
+    <Route render={() => {
+      if (sessionStorage.getItem(userStorageKey)) {
+        return (
+          <div className="light-side">
+            <Header />
+            <ApplicationViews />
+            <Footer />
+          </div>
+        )
+      } else {
+        return <Redirect to="/login" />;
+      }
+    }} />
 
     <Route path="/login">
       <Login />
     </Route>
-    <Route path="/register">
-      <Register />
-    </Route>
+    <JediProvider>
+      <Route path="/register">
+        <Register />
+      </Route>
+    </JediProvider>
   </>
 )
