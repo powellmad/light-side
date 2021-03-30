@@ -8,17 +8,19 @@ h1 {
 }
 
 .noteCard, .noteForm {
-    border: #E8B087 30px solid;
-    padding: 25px 25px 10px;
+    /* border: white 10px solid; */
+    padding: 30px;
     font-size: 20px;
     margin: auto;
     width: 70%;
     margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px 2px yellowgreen;
     background-color: white;
 }
 
 .noteCard {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .noteCard div {
@@ -38,3 +40,46 @@ h1 {
 .delete-button {
     margin-left: 85%;
 }
+/*
+.starwars-title {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(300px) rotateX(25deg);
+    transform-origin: 50% 100%;
+    text-align: justify;
+    position: absolute;
+    margin-left: -9em;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 350%;
+    height: 50em;
+    width: 18em;
+    bottom: 0;
+    left: 50%;
+  }
+
+  .starwars-title:after {
+    position: absolute;
+    content: ' ';
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  /* Set the scrolling animation and position it */
+/* .starwars-text {
+    animation: scroll 120s linear 16s;
+    position: absolute;
+    top: 100%;
+    color: yellow;
+  }
+  
+  @keyframes scroll {
+      0% {
+          top: 0%;
+      }
+      100% {
+          top: -150%;
+      }
+  }
+   */

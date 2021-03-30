@@ -15,7 +15,7 @@ export const Header = () => (
                 <Link className="header__link" to="/notes">My Padawan Notes</Link>
             </div>
             <div>
-                <img className="lightsaber" src={"./jediAvatars/jediImages/green.png"} />
+                <img className="lightsaber" src={`./jediAvatars/jediImages/green.png`} />
             </div>
             <img className="avatar" src={"./jediAvatars/padawan.png"} alt="user's avatar" />
         </div>

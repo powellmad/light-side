@@ -1,8 +1,7 @@
 body {
     margin: 0;
-    background-color: #F4E4CD;
+    /* background-color: #F4E4CD; */
     min-height: fit-content;
-    background-image: url("/src/images/tiny-stars.jpeg");
 }
 
 h1 {
