@@ -1,15 +1,19 @@
-import React, { useState } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import { authApi, userStorageKey } from "./authSettings"
 import "./Login.css"
 
 export const Register = () => {
-
-    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "" })
     const [conflictDialog, setConflictDialog] = useState(false)
-
     const history = useHistory()
 
+    const [registerUser, setRegisterUser] = useState({ 
+        firstName: "", 
+        lastName: "", 
+        email: "", 
+        jediId: 2
+    })
+    
     const handleInputChange = (event) => {
         const newUser = { ...registerUser }
         newUser[event.target.id] = event.target.value
@@ -36,7 +40,8 @@ export const Register = () => {
                         },
                         body: JSON.stringify({
                             email: registerUser.email,
-                            name: `${registerUser.firstName} ${registerUser.lastName}`
+                            name: `${registerUser.firstName} ${registerUser.lastName}`,
+                            jediId: registerUser.jediId
                         })
                     })
                         .then(res => res.json())
@@ -55,7 +60,7 @@ export const Register = () => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <main className="register">
 
             <dialog className="dialog dialog--password" open={conflictDialog}>
                 <div>Account with that email address already exists</div>

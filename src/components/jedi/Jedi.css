@@ -28,6 +28,7 @@
     align-content: center;   
     border-radius: 10px;
     color: #1F1F1F;
+    
 }
 
 .jediComponent {
@@ -39,6 +40,7 @@
     align-content: center;
     border-radius: 2%;
     color: #1F1F1F;
+    box-shadow: 0px 0px 40px 5px yellowgreen;
 }
 
 .jediComponent h1 {
@@ -59,6 +61,7 @@
 .jedi__avatar {
     width: 150px;
     margin: auto;
+    
 }
 
 .jedi__name {
@@ -66,8 +69,8 @@
 }
 
 .jedi__image {
-    width: 350px;
-    margin: auto;
+    width: 100%;
+    margin: 20px auto;
 }
 
 .jediSelect__name {
@@ -96,6 +99,7 @@ img {
     margin: 40px;
     background-color: #F4E4CD;
     border-radius: 5%;
+    min-width: 300px;
 }
 
 .jediDetail div, button {

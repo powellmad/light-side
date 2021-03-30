@@ -1,8 +1,7 @@
 body {
     margin: 0;
-    background-color: #F4E4CD;
+    /* background-color: #F4E4CD; */
     min-height: fit-content;
-    background-image: url("/src/images/tiny-stars.jpeg");
 }
 
 h1 {
@@ -28,6 +27,7 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     flex-grow: 4;
+    flex-wrap: wrap-reverse;
 }
 
 /* Styling for header */

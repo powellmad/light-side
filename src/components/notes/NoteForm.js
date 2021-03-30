@@ -72,6 +72,7 @@ export const NoteForm = () => {
         }
     }
 
+    
     useEffect(() => {
         getQuoteById(randomQuoteId).then(() => {
             if (noteId) {
@@ -87,6 +88,7 @@ export const NoteForm = () => {
     }, [])
 
     return (
+        // if note exists (has an id) the form is for edit
         <form className="noteForm">
             <h2>{noteId ? "Edit Note" : "Create Note"}</h2>
             <p>"{noteId ? note.quote?.jeditext : quoteById.jeditext}"</p>
