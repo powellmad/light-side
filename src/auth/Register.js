@@ -1,26 +1,17 @@
 import React, { useState, useContext, useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import { authApi, userStorageKey } from "./authSettings"
-import { JediContext } from "../components/jedi/JediProvider"
 import "./Login.css"
 
 export const Register = () => {
     const [conflictDialog, setConflictDialog] = useState(false)
     const history = useHistory()
-    const { jedi, getJedi } = useContext(JediContext)
-
-    useEffect(() => {
-        getJedi()
-    }, [])
-
-    const randomJediId = Math.floor(Math.random() * jedi.length)
-    console.log(randomJediId)
 
     const [registerUser, setRegisterUser] = useState({ 
         firstName: "", 
         lastName: "", 
         email: "", 
-        jediId: randomJediId
+        jediId: 2
     })
     
     const handleInputChange = (event) => {

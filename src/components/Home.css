@@ -27,6 +27,7 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     flex-grow: 4;
+    flex-wrap: wrap-reverse;
 }
 
 /* Styling for header */
