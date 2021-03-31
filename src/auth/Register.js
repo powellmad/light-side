@@ -8,10 +8,12 @@ export const Register = () => {
     const history = useHistory()
 
     const [registerUser, setRegisterUser] = useState({ 
+        id: 0,
         firstName: "", 
         lastName: "", 
         email: "", 
-        jediId: 2
+        jediId: 2,
+        themeId: 1
     })
     
     const handleInputChange = (event) => {
@@ -39,9 +41,12 @@ export const Register = () => {
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
+                            id: registerUser.id,
+                            firstName: `${registerUser.firstName}`,
+                            lastName: `${registerUser.lastName}`,
                             email: registerUser.email,
-                            name: `${registerUser.firstName} ${registerUser.lastName}`,
-                            jediId: registerUser.jediId
+                            jediId: registerUser.jediId,
+                            themeId: registerUser.themeId
                         })
                     })
                         .then(res => res.json())

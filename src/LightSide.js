@@ -6,9 +6,11 @@ import { ApplicationViews } from "./components/ApplicationViews"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
+import { JediProvider } from "./components/jedi/JediProvider"
+import { UserProvider } from "./components/users/UserProvider"
+import { ThemeProvider } from "./components/themes/ThemeProvider"
 import "./index.css"
 import "./auth/Login.css"
-import { JediProvider } from "./components/jedi/JediProvider"
 
 export const LightSide = () => (
   <>
@@ -16,7 +18,12 @@ export const LightSide = () => (
       if (sessionStorage.getItem(userStorageKey)) {
         return (
           <div className="light-side">
-            <Header />
+            <UserProvider>
+              <ThemeProvider>
+                <Header />
+              </ThemeProvider>
+            </UserProvider>
+
             <ApplicationViews />
             <Footer />
           </div>
