@@ -7,7 +7,7 @@ import "./Home.css"
 
 export const Header = () => {
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
-    const { getThemes } = useContext(ThemeContext)
+    const { themes, getThemes } = useContext(ThemeContext)
     const { getUserById } = useContext(UserContext)
     const [userObject, setUserObject] = useState({})
 
@@ -21,7 +21,10 @@ export const Header = () => {
     return (
         <header className="header">
             <div className="header__logo">
-                <Link className="header__link" to="/"><h2>The Light Side of the Force</h2></Link>
+                <Link className="header__link" to="/">
+                    <img src="./jediImages/logo1.png"/>
+                    <img src="./jediImages/logo2.png"/>
+                    </Link>
             </div>
 
             <div className="header__user">
@@ -30,10 +33,12 @@ export const Header = () => {
                     <Link className="header__link" to="/notes">My Padawan Notes</Link>
                 </div>
                 <div>
-                    <img className="lightsaber" src={`./jediImages/${userObject?.theme?.color}.png`}/>
+                    <Link to="/themes"><img className="lightsaber" src={`./jediImages/image.png`}/></Link>
                 </div>
                 <img className="avatar" src={"./jediAvatars/padawan.png"} alt="user's avatar" />
             </div>
         </header>
     )
 }
+
+// ${userObject?.theme?.theme}
