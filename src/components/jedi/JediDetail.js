@@ -27,7 +27,7 @@ export const JediDetail = () => {
                 <Link to="/jedi" className="jedi__selection">Choose Jedi</Link>
             </div>
             <img className="jedi__image" src={`./jediAvatars/${userObject?.jedi?.image}.png`} alt={`${userObject.jedi?.image}`} />
-            <button className="jedi__about">About {userObject.jedi?.name}</button>
+            <button className="jedi__about main-button">About {userObject.jedi?.name}</button>
         </div>
     )
 }

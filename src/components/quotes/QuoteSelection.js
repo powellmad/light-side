@@ -22,10 +22,10 @@ export const QuoteSelection = () => {
         <QuoteCard quote={randomQuote} />
       </div>
       <div className="buttonContainer">
-        <button onClick={() => { history.push("/") }}>
+        <button className="main-button" onClick={() => { history.push("/") }}>
           Next Quote
         </button>
-        <button onClick={() => { history.push(`/quotes/${randomQuote.id}/notes/create`) }}>
+        <button className="main-button" onClick={() => { history.push(`/quotes/${randomQuote.id}/notes/create`) }}>
           Add Note
         </button>
       </div >

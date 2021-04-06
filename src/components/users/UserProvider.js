@@ -6,14 +6,14 @@ export const UserProvider = (props) => {
     const [users, setUsers] = useState([])
 
     const getUsers = () => {
-    return fetch("http://localhost:8088/users?_expand=jedi")
+    return fetch("http://localhost:8088/users?_expand=jedi&_expand=theme")
     .then(res => res.json())
     .then(setUsers)
     }
 
     // This fetch call gets a single user by id to get all the info for the current user logged in
     const getUserById = (id) => {
-        return fetch(`http://localhost:8088/users/${id}?_expand=jedi`)
+        return fetch(`http://localhost:8088/users/${id}?_expand=jedi&_expand=theme`)
             .then(res => res.json())
     }
     
@@ -28,10 +28,21 @@ export const UserProvider = (props) => {
         })
             .then(getUsers)
     }
+    
+    const updateTheme = (user) => {
+        return fetch(`http://localhost:8088/users/${user.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+            .then(getUsers)
+    }
 
     return (
         <UserContext.Provider value={{
-            users, getUsers, getUserById, updateJedi
+            users, getUsers, getUserById, updateJedi, updateTheme
         }}>
             {props.children}
         </UserContext.Provider>

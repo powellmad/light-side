@@ -8,10 +8,12 @@ export const Register = () => {
     const history = useHistory()
 
     const [registerUser, setRegisterUser] = useState({ 
+        id: 0,
         firstName: "", 
         lastName: "", 
         email: "", 
-        jediId: 2
+        jediId: 2,
+        themeId: 1
     })
     
     const handleInputChange = (event) => {
@@ -39,9 +41,12 @@ export const Register = () => {
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
+                            id: registerUser.id,
+                            firstName: `${registerUser.firstName}`,
+                            lastName: `${registerUser.lastName}`,
                             email: registerUser.email,
-                            name: `${registerUser.firstName} ${registerUser.lastName}`,
-                            jediId: registerUser.jediId
+                            jediId: registerUser.jediId,
+                            themeId: registerUser.themeId
                         })
                     })
                         .then(res => res.json())
@@ -64,7 +69,7 @@ export const Register = () => {
 
             <dialog className="dialog dialog--password" open={conflictDialog}>
                 <div>Account with that email address already exists</div>
-                <button className="button--close" onClick={e => setConflictDialog(false)}>Close</button>
+                <button className="button--close main-button" onClick={e => setConflictDialog(false)}>Close</button>
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
@@ -82,7 +87,7 @@ export const Register = () => {
                     <input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Sign in </button>
+                    <button className="main-button" type="submit"> Sign in </button>
                 </fieldset>
             </form>
         </main>
