@@ -1,9 +1,12 @@
 import React,{ useContext }  from "react"
 import {useHistory} from "react-router-dom"
 import { UserContext } from "../users/UserProvider"
+import { ThemeContext } from "../themes/ThemeProvider"
+
 
 export const Theme = ({ theme }) => {
-    const {updateTheme} = useContext(UserContext)
+    const { getUsers, updateTheme } = useContext(UserContext)
+    const { getThemes } = useContext(ThemeContext)
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
     const history = useHistory()
     
@@ -13,6 +16,8 @@ export const Theme = ({ theme }) => {
             themeId: theme.id
         }
         updateTheme(updatedUserObject)
+        .then(getThemes)
+        .then(getUsers)
         .then(() => history.push("/"))
     }
 

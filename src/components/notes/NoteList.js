@@ -28,7 +28,7 @@ export const NoteList = () => {
     }
 
     const UserDelete = (note) => (
-        <button className="buttonStyle" onClick={() => handleDelete(note.id)}> Delete </button>
+        <button className="buttonStyle main-button" onClick={() => handleDelete(note.id)}> Delete </button>
     )
 
     return (
@@ -48,7 +48,7 @@ export const NoteList = () => {
                             <div className="noteCard">
                                 <NoteCard key={note.id} note={note} />
                                 {UserDelete(note)}
-                                <button onClick={() => {
+                                <button className="main-button" onClick={() => {
                                     history.push(`/notes/edit/${note.id}`)
                                 }}>Edit</button>
                             </div>)

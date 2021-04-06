@@ -7,6 +7,8 @@ import { NoteList } from "./notes/NoteList"
 import { NoteForm } from "./notes/NoteForm"
 import { JediProvider } from "./jedi/JediProvider"
 import { JediSelect } from "./jedi/JediSelect"
+import { ThemeProvider } from "./themes/ThemeProvider"
+import { ThemeSelect } from "./themes/ThemeSelect"
 import { UserProvider } from "./users/UserProvider"
 
 export const ApplicationViews = () => {
@@ -63,6 +65,14 @@ export const ApplicationViews = () => {
                     </Route>
                 </UserProvider>
             </JediProvider>
+            
+            <ThemeProvider>
+                <UserProvider>
+                    <Route path="/themes">
+                        <ThemeSelect />
+                    </Route>
+                </UserProvider>
+            </ThemeProvider>
         </>
     )
 }

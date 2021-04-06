@@ -1,6 +1,6 @@
 import userEvent from "@testing-library/user-event"
 import React, { useContext, useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { UserContext } from "./users/UserProvider"
 import { ThemeContext } from "./themes/ThemeProvider"
 import "./Home.css"
@@ -8,7 +8,7 @@ import "./Home.css"
 export const Header = () => {
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
     const { themes, getThemes } = useContext(ThemeContext)
-    const { getUserById } = useContext(UserContext)
+    const { getUsers, getUserById } = useContext(UserContext)
     const [userObject, setUserObject] = useState({})
 
     // Gets currentUser info and sets it as a state variable
@@ -16,6 +16,7 @@ export const Header = () => {
         getUserById(currentUser)
             .then(setUserObject)
             .then(getThemes)
+            .then(getUsers)
     }, [])
 
     return (
@@ -33,7 +34,7 @@ export const Header = () => {
                     <Link className="header__link" to="/notes">My Padawan Notes</Link>
                 </div>
                 <div>
-                    <Link to="/themes"><img className="lightsaber" src={`./jediImages/image.png`}/></Link>
+                    <Link to="/themes"><img className="lightsaber" src={`./jediImages/${userObject?.theme?.image}.png`}/></Link>
                 </div>
                 <img className="avatar" src={"./jediAvatars/padawan.png"} alt="user's avatar" />
             </div>
@@ -41,4 +42,4 @@ export const Header = () => {
     )
 }
 
-// ${userObject?.theme?.theme}
+// 

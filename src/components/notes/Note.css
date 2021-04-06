@@ -9,9 +9,9 @@ h1 {
 
 .noteCard, .noteForm {
     /* border: white 10px solid; */
-    padding: 30px;
+    padding: 40px;
     font-size: 20px;
-    margin: auto;
+    margin: 10px auto 20px;
     width: 70%;
     margin-top: 30px;
     border-radius: 20px;
@@ -23,8 +23,9 @@ h1 {
     margin-bottom: 60px;
 }
 
+
 .noteCard div {
-    margin: 2px;
+    margin: 10px 2px;
 }
 
 .noteForm {
@@ -40,6 +41,46 @@ h1 {
 .delete-button {
     margin-left: 85%;
 }
+
+.main-button {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #E8B087;
+    text-align: center;
+    transition: all 0.2s;
+  }
+
+.main-button:hover {
+  background-color: #F4E4CD;
+}
+
+.main-button {
+    display:inline-block;
+    padding:0.7em 1.7em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    background-color:#ECB176;
+    box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    text-align:center;
+    position:relative;
+}
+
+.main-button:hover {
+  background-color: #F4E4CD;
+}
+
 /*
 .starwars-title {
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;

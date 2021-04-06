@@ -69,7 +69,7 @@ export const Register = () => {
 
             <dialog className="dialog dialog--password" open={conflictDialog}>
                 <div>Account with that email address already exists</div>
-                <button className="button--close" onClick={e => setConflictDialog(false)}>Close</button>
+                <button className="button--close main-button" onClick={e => setConflictDialog(false)}>Close</button>
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
@@ -87,7 +87,7 @@ export const Register = () => {
                     <input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Sign in </button>
+                    <button className="main-button" type="submit"> Sign in </button>
                 </fieldset>
             </form>
         </main>

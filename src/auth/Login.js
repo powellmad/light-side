@@ -41,7 +41,7 @@ export const Login = () => {
         <main className="container--login">
             <dialog className="dialog dialog--auth" open={existDialog}>
                 <div>User does not exist</div>
-                <button className="button--close" onClick={e => setExistDialog(false)}>Close</button>
+                <button className="button--close main-button" onClick={e => setExistDialog(false)}>Close</button>
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
@@ -58,7 +58,7 @@ export const Login = () => {
                             onChange={handleInputChange} />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
+                        <button className="main-button" type="submit">
                             Sign in
                         </button>
                     </fieldset>

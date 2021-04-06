@@ -97,7 +97,7 @@ export const NoteForm = () => {
                     <textarea name="text" id="text" cols="90" rows="5" onChange={handleControlledInputChange} required autoFocus className="form-control" value={note.text}></textarea>
                 </div>
             </fieldset>
-            <button className="btn btn-primary" onClick={handleClickSaveNote}>
+            <button className="main-button" onClick={handleClickSaveNote}>
                 Save Note
           </button>
         </form>
