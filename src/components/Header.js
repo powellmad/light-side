@@ -30,7 +30,7 @@ export const Header = () => {
 
             <div className="header__user">
                 <div className="user__info">
-                    <h3>Welcome, Padawan {userObject?.firstName}!</h3>
+                    <h3>Welcome, Padawan Madison{userObject?.firstName}!</h3>
                     <Link className="header__link" to="/notes">My Padawan Notes</Link>
                 </div>
                 <div>
