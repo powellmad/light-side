@@ -1,6 +1,7 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
+import { Header } from "./Header"
 import { QuoteProvider } from "./quotes/QuoteProvider"
 import { NoteProvider } from "./notes/NoteProvider"
 import { NoteList } from "./notes/NoteList"
@@ -14,6 +15,14 @@ import { UserProvider } from "./users/UserProvider"
 export const ApplicationViews = () => {
     return (
         <>
+            <UserProvider>
+                <ThemeProvider>
+                    <Route path="/">
+                        <Header />
+                    </Route>
+                </ThemeProvider>
+            </UserProvider>
+
             {/* Home Page */}
             <QuoteProvider>
                 <JediProvider>
@@ -65,7 +74,7 @@ export const ApplicationViews = () => {
                     </Route>
                 </UserProvider>
             </JediProvider>
-            
+
             <ThemeProvider>
                 <UserProvider>
                     <Route path="/themes">

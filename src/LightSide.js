@@ -18,11 +18,7 @@ export const LightSide = () => (
       if (sessionStorage.getItem(userStorageKey)) {
         return (
           <div className="light-side">
-            <UserProvider>
-              <ThemeProvider>
-                <Header />
-              </ThemeProvider>
-            </UserProvider>
+            
 
             <ApplicationViews />
             <Footer />
