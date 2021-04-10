@@ -6,6 +6,9 @@ Everyone needs motivation, encouragement, and positive self talk, but typical se
 <!-- Images of the Landing Page -->
 ![The Light Side of the Force Landing Page](/src/images/light-side-home.png)
 
+![The Light Side of the Force Walk-Through](/src/images/light-side-gif.png)
+
+
 
 ### Features
 - Users can **Register/Login as a Padawan** and their id is automatically stored in session storage.
