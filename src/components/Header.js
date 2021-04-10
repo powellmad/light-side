@@ -23,8 +23,8 @@ export const Header = () => {
         <header className="header">
             <div className="header__logo">
                 <Link className="header__link" to="/">
-                    <img src="./jediImages/logo1.png"/>
-                    <img src="./jediImages/logo2.png"/>
+                    <img src="./jediImages/logo1.png" alt="The Light Side"/>
+                    <img src="./jediImages/logo2.png" alt="of the Force"/>
                     </Link>
             </div>
 
@@ -34,7 +34,7 @@ export const Header = () => {
                     <Link className="header__link" to="/notes">My Padawan Notes</Link>
                 </div>
                 <div>
-                    <Link to="/themes"><img className="lightsaber" src={`./jediImages/${userObject?.theme?.image}.png`}/></Link>
+                    <Link to="/themes"><img className="lightsaber" src={`./jediImages/${userObject?.theme?.image}.png`} alt="user lightsaber"/></Link>
                 </div>
                 <img className="avatar" src={"./jediAvatars/padawan.png"} alt="user's avatar" />
             </div>

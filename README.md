@@ -4,7 +4,7 @@
 Everyone needs motivation, encouragement, and positive self talk, but typical self help language doesn’t work for everyone. The Light Side of the Force would benefit everyone, especially those who are turned off by the typical self-help genre. As a developer, I often seek out motivation and encouragement to battle imposter syndrome and cope with the struggles of coding. The Light Side of the Force offers a little extra help in a new, relatable package.
 
 <!-- Images of the Landing Page -->
-![The Light Side of the Force Landing Page](/src/images/capstone.png)
+![The Light Side of the Force Landing Page](/src/images/light-side-home.png)
 
 
 ### Features
@@ -36,13 +36,23 @@ React, React-Router-Dom, JSX, CSS, Dbdiagram.io, Sketchbook.io, JSON-server.
 
 ## Planning
 
-### ERD
+### Entity Relationship Diagram (ERD)
+![The Light Side of the Force ERD](/src/images/erd.png)
 
 ### Wireframe
+![The Light Side of the Force Wireframe](/src/images/wireframe.png)
 
-### User Stories
+### Dependency Diagram
+![The Light Side of the Force Dependency Graph](/src/images/dependency.png)
 
 ### Accessibility:
+The WebAIM Contrast Checker was used to ensure readibility for all types of users. 
+
+![The Light Side of the Force Contrast Checker](/src/images/contrast-check.png)
+
+The WAVE extension analyzed the entire app to check for weaknesses in accessibility. 
+
+![The Light Side of the Force WAVE Evaluation](/src/images/wave-evaluation.png)
 
 ## A Note About Authentication
 The login and registration code used is fake, completely insecure, and would never be implemented in a professional application. It is a simulation authentication using very simplistic tools, because authentication is not a learning objective of this project.
