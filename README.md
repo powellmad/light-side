@@ -8,19 +8,20 @@ Everyone needs motivation, encouragement, and positive self talk, but typical se
 
 
 ### Features
-- Users can Register/Login as a Padawan and their id is automatically stored in session storage.
-- Logged in users have access to customizations and writing notes
-- Any user can click “next” to show a new, randomized quote from the local json database
-- Users can choose their jedi instructor from a presented list
-- When Yoda is selected as master, yoda speak is rendered instead of a typical jedi quote
-- Users can add a note to any quote featured on the landing page
-- User's notes appear in "My Padawan Notes", sorted by timstamp and including the associated quote
+- Users can **Register/Login as a Padawan** and their id is automatically stored in session storage.
+- Logged in users have access to customizations and writing notes.ß
+- Any user can click “next” to show a new, **randomized motivational quote** from the local json database.
+- Users can **choose their jedi instructor** from a presented list.
+- When **Yoda** is selected as master, the quotes are written in **yodaisms**.
+- Users can **add a note** to any quote featured on the landing page.
+- User's notes appear in "My Padawan Notes", sorted by timstamp and including the associated quote.
 
 #### Future Features May Include
-- When a Jedi is selected, an "about" button is rendered, which features a short background for each Jedi
-- Users can select their lightsaber color. When selected, the profile theme reflects lightsaber color.
-- Dark Mode! The app becomes the the Dark Side of the Force when "dark mode" is toggled. The colors and darker, the jedi become sith and the lightsaber turns red. 
-- A Lightsaber sound effect is triggered upon initial render and anytime the color is changed.
+- When a Jedi is selected, **an "about" button** is rendered, which features a short background for each Jedi
+- Users can **select their lightsaber color**. When selected, the profile theme reflects lightsaber color.
+- Dark Mode! The app becomes **The Dark Side of the Force** when "dark mode" is toggled. The colors and darker, the jedi become sith and the lightsaber turns red. 
+- **A Lightsaber sound effect** is triggered upon initial render and anytime the color is changed.
+- A user **profile page** for editing user information.
 
 ## Getting Started 
 
