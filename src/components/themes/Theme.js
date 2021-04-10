@@ -17,7 +17,6 @@ export const Theme = ({ theme }) => {
         }
         updateTheme(updatedUserObject)
         .then(getThemes)
-        .then(getUsers)
         .then(() => history.push("/"))
     }
 
