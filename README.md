@@ -9,7 +9,7 @@ Everyone needs motivation, encouragement, and positive self talk, but typical se
 
 ### Features
 - Users can **Register/Login as a Padawan** and their id is automatically stored in session storage.
-- Logged in users have access to customizations and writing notes.ß
+- Logged in users have access to customizations and writing notes.
 - Any user can click “next” to show a new, **randomized motivational quote** from the local json database.
 - Users can **choose their jedi instructor** from a presented list.
 - When **Yoda** is selected as master, the quotes are written in **yodaisms**.
