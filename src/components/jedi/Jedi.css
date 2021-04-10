@@ -28,7 +28,14 @@
     align-content: center;   
     border-radius: 0.2em;
     color: #1F1F1F;
-    
+}
+
+.jediComponent a {
+    color: #74311c;
+}
+
+.jediComponent a:active {
+    color: #BB583A;
 }
 
 .jediComponent {
@@ -104,6 +111,14 @@ img {
 
 .jediDetail div, button {
     margin: 15px;
+}
+
+.jediDetail a {
+    color: #74311c;
+}
+
+.jediDetail a:active {
+    color: #BB583A;
 }
 
 button {
